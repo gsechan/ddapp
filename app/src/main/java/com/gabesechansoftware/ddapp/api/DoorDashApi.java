@@ -4,6 +4,7 @@ import com.gabesechansoftware.ddapp.api.models.RestaurantsNearLocationResult;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
+import retrofit2.http.Path;
 import retrofit2.http.Query;
 
 /**
@@ -16,4 +17,5 @@ interface DoorDashApi {
                                                            @Query("lng") double lng,
                                                            @Query("offset") int offset,
                                                            @Query("limit") int limit);
+
 }

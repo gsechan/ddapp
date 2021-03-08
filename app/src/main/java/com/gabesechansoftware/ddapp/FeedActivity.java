@@ -11,7 +11,7 @@ import android.os.Looper;
 import android.widget.Toast;
 
 import com.gabesechansoftware.ddapp.api.DoorDashApiController;
-import com.gabesechansoftware.ddapp.databinding.ActivityMainBinding;
+import com.gabesechansoftware.ddapp.databinding.FeedActivityBinding;
 import com.gabesechansoftware.ddapp.feedfetcher.FeedFetcher;
 
 import androidx.annotation.NonNull;
@@ -33,7 +33,7 @@ public class FeedActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ActivityMainBinding binding = ActivityMainBinding.inflate(getLayoutInflater());
+        FeedActivityBinding binding = FeedActivityBinding.inflate(getLayoutInflater());
 
         setContentView(binding.getRoot());
         binding.feed.setHasFixedSize(true);

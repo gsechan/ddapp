@@ -37,6 +37,4 @@ public class DoorDashApiController {
                         Callback<RestaurantsNearLocationResult> callback){
         doorDashApi.feedByLatLng(lat, lng, offset, limit).enqueue(callback);
     }
-
-
 }

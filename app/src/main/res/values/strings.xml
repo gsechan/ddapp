@@ -2,4 +2,5 @@
     <string name="app_name">Door Dash App</string>
     <string name="closed">Closed</string>
     <string name="minutesAway">%1$d minutes</string>
+    <string name="ratings">%1$d ratings</string>
 </resources>

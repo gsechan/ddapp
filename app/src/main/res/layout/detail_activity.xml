@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/detail_header_height"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@color/textDark"
+        android:singleLine="true"
+        android:textAlignment="textStart"
+        android:layout_marginStart="@dimen/detail_name_margin_start"
+        app:layout_constraintStart_toStartOf = "parent"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        />
+    <TextView
+        android:id="@+id/tags"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        android:textColor="@color/textLight"
+        android:textAlignment="textStart"
+        android:layout_marginStart="@dimen/detail_name_margin_start"
+        android:layout_marginTop="@dimen/interline_padding"
+        app:layout_constraintStart_toStartOf = "parent"
+        app:layout_constraintTop_toBottomOf="@id/name"
+        />
+    <TextView
+        android:id="@+id/rating"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        android:textColor="@color/textLight"
+        android:textAlignment="textStart"
+        android:layout_marginStart="@dimen/detail_name_margin_start"
+        android:layout_marginTop="@dimen/interline_padding"
+        app:layout_constraintStart_toStartOf = "parent"
+        app:layout_constraintTop_toBottomOf="@id/tags"
+        />
+    <TextView
+        android:id="@+id/num_ratings"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        android:textColor="@color/textLight"
+        android:textAlignment="textStart"
+        android:layout_marginStart="@dimen/intertext_padding"
+        app:layout_constraintStart_toEndOf = "@id/rating"
+        app:layout_constraintBaseline_toBaselineOf="@id/rating"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

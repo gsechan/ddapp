@@ -25,8 +25,8 @@
         android:textColor="@color/textDark"
         android:singleLine="true"
         android:textAlignment="textStart"
-        app:layout_constraintLeft_toRightOf="@id/guidelineLeft"
-        app:layout_constraintRight_toLeftOf="@id/guidelineRight"
+        app:layout_constraintStart_toEndOf="@id/guidelineLeft"
+        app:layout_constraintEnd_toStartOf="@id/guidelineRight"
         app:layout_constraintTop_toTopOf="@id/cover"
         />
     <TextView
@@ -38,8 +38,8 @@
         android:singleLine="true"
         android:ellipsize="end"
         android:layout_marginTop="@dimen/interline_padding"
-        app:layout_constraintLeft_toRightOf="@id/guidelineLeft"
-        app:layout_constraintRight_toLeftOf="@id/guidelineRight"
+        app:layout_constraintStart_toEndOf="@id/guidelineLeft"
+        app:layout_constraintEnd_toStartOf="@id/guidelineRight"
         app:layout_constraintTop_toBottomOf="@id/name"
         />
     <TextView
@@ -50,7 +50,7 @@
         android:textColor="@color/textLight"
         android:singleLine="true"
         android:layout_marginStart="@dimen/intertext_padding"
-        app:layout_constraintLeft_toRightOf="@id/guidelineRight"
+        app:layout_constraintStart_toEndOf="@id/guidelineRight"
         app:layout_constraintTop_toTopOf="@id/tags"
         app:layout_constraintTop_toBottomOf="@id/tags"
         />

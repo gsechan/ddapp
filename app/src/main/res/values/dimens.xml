@@ -6,4 +6,7 @@
     <dimen name="feed_cover_height"> 40dp</dimen>
     <dimen name="feed_cover_margin"> 10dp</dimen>
 
+    <dimen name="detail_header_height"> 100dp</dimen>
+    <dimen name="detail_name_margin_start"> 10dp</dimen>
+
 </resources>

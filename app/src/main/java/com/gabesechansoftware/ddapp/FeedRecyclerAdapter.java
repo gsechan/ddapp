@@ -1,5 +1,7 @@
 package com.gabesechansoftware.ddapp;
 
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -51,7 +53,7 @@ public class FeedRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
             this.binding = binding;
         }
 
-        public void bind(FeedStore store) {
+        public void bind(final FeedStore store) {
             binding.name.setText(store.getName());
             binding.tags.setText(store.getTags());
             if(store.isOpen()) {
@@ -61,6 +63,10 @@ public class FeedRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
                 binding.time.setText(R.string.closed);
             }
             Picasso.get().load(store.getCoverImgUrl()).into(binding.cover);
+            itemView.setOnClickListener(v-> {
+                Context context = v.getContext();
+                context.startActivity(DetailActivity.makeIntent(context, store));
+            });
         }
     }
 

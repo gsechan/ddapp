@@ -8,9 +8,12 @@ public class RestaurantNearLocationStore {
     public int id;
     public String description;
     public String cover_img_url;
+    public String header_img_url;
     public String name;
     public String url;
     public RestaurantStatus status;
+    public double average_ratings;
+    public int num_ratings;
 
     public FeedStore toFeedStore() {
         int maxMinutes = 0;
@@ -19,6 +22,7 @@ public class RestaurantNearLocationStore {
             isOpen = status.unavailable_reason == null;
             maxMinutes = status.asap_minutes_range.isEmpty() ? 100 : Collections.max(status.asap_minutes_range);
         }
-        return new FeedStore(name, description, cover_img_url, maxMinutes, isOpen, url);
+        return new FeedStore(name, description, cover_img_url, header_img_url, maxMinutes,
+                isOpen, url, id, average_ratings, num_ratings);
     }
 }
